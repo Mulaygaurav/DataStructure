@@ -1,0 +1,24 @@
+
+public class Revision2{
+	
+
+public static void StringSubsequences(String str,int idx, String newString){
+	if(idx==str.length()){
+		System.out.println(newString);
+		return;
+	}
+
+char currCHar=str.charAt(idx);
+	StringSubsequences(str,idx+1,newString+currCHar);
+
+	StringSubsequences(str,idx+1,newString);
+	}
+
+	public static void main(String[] args) {
+
+String str ="abc";
+
+StringSubsequences(str,0," ");
+
+
+		}}

@@ -1,0 +1,35 @@
+public class Revision2{
+	
+// Count totals paths in amze to move from (0,0) to (n,m)
+public static int CountPathOFMatrix(int i,int j,int n,int m){
+	if(i==n || j==n){
+	
+		return 0;
+	}
+	if(i==n-1 && j==n-1){
+		return 1;
+	}
+
+int downpath =CountPathOFMatrix(i+1,j,n,m);
+
+int rightpath =CountPathOFMatrix(i,j+1,n,m);
+
+
+
+return downpath + rightpath;
+}
+
+	
+	
+
+
+public static void main(String[] args) {
+
+int n=3,m=3;
+
+int noOfpath =CountPathOFMatrix(0,0,n,m);
+System.out.println(noOfpath);
+
+
+		}
+}

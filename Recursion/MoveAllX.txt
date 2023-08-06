@@ -1,0 +1,32 @@
+
+public class Revision2{
+	// privious String "axbxcxxd"
+	//output String  "abcdxxxx"
+	public static void MoveAllX( String str,int idx ,int Count,String newString){
+		if(idx==str.length()){
+			for(int i=0;i<Count;i++){
+				newString+='x';
+			}
+			System.out.println(newString);
+			return;
+		}
+	char CurrChar=str.charAt(idx);
+	if(CurrChar=='x'){
+		Count++;
+		MoveAllX(str,idx+1,Count,newString);
+	}else
+{
+	newString += CurrChar;
+	MoveAllX(str,idx+1,Count,newString);
+}	
+
+	}
+
+
+	public static void main(String[] args) {
+
+
+String str ="axbxcxxd";
+MoveAllX(str,0,0,"");
+
+		}}
